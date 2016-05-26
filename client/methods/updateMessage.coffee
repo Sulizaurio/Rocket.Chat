@@ -38,8 +38,7 @@ Meteor.methods
 
 			ChatMessage.update
 				_id: message._id
-				'u._id': Meteor.userId()
-			,
+				'u._id': Meteor.userId(),
 				$set:
 					"editedAt": message.editedAt
 					"editedBy": message.editedBy
