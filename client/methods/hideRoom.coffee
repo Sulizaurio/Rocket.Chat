@@ -6,7 +6,6 @@ Meteor.methods
 		ChatSubscription.update
 			rid: rid
 			'u._id': Meteor.userId()
-		,
 			$set:
 				alert: false
 				open: false
