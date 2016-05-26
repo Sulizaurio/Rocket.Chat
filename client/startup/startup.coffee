@@ -46,7 +46,7 @@ Meteor.startup ->
 				Function(localeFn)()
 				moment.locale(language)
 
-	Meteor.subscribe("userData", () ->
+	Meteor.subscribe("userData") ->
 		userLanguage = Meteor.user()?.language
 		userLanguage ?= defaultUserLanguage()
 
