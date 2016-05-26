@@ -4,7 +4,7 @@ Blaze.registerHelper 'pathFor', (path, kw) ->
 BlazeLayout.setRoot 'body'
 
 FlowRouter.subscriptions = ->
-	Tracker.autorun =>
+	Tracker.autorun ->
 		RoomManager.init()
 		@register 'userData', Meteor.subscribe('userData')
 		@register 'activeUsers', Meteor.subscribe('activeUsers')
